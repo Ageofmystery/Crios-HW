@@ -1,0 +1,201 @@
+@import "__variables"
+
+//---initialize
+html, body
+  width: 100%
+  height: 100%
+  font-size: 16px
+.wrapper
+  width: 100%
+  background: url("../img/greet-bg.png") no-repeat center 450px
+  overflow: hidden
+.row
+  &:after, &:before
+    display: none
+
+//---universal
+.head-text
+  font: 400 48px $font-monts
+  color: $col-black
+.head-desc
+  font: 400 18px/18px $font-monts
+  color: $col-grayblue-25
+.btn-white
+  font: 700 14px/18px $font-monts
+  color: $col-blue
+  padding: 20px 40px
+  min-width: 230px
+  border-radius: 22px
+  background: $col-white
+  box-shadow: 0 0 65px $col-grayblue-15
+  &:hover
+    background: $col-blue
+.container-fluid,.photo-block>figure
+  padding: 0
+
+//---/////////////////////
+.main-head
+  .btn-open
+    display: block
+  .navbar-toggle
+    margin-right: 0
+    .icon-bar
+      background: $col-black
+      width: 18px
+  .logo
+    position: relative
+    margin: 0
+    &:after
+      content: ""
+      display: block
+      position: absolute
+      top: -100%
+      left: -55%
+      background: $col-white
+      box-shadow: 0 0 65px $col-grayblue-15
+      width: 410px
+      height: 206px
+      border-radius: 0 0 206px 206px
+      z-index: -1
+      @media (min-width: 768px)
+        top: 0
+    a
+      text-decoration: none
+      font: 400 48px $font-monts
+      color: $col-blue
+      display: block
+      .text-ops
+        display: block
+        font: 700 18px/18px $font-monts
+        color: $col-grayblue-15
+  .search
+    a
+      text-decoration: none
+    .glyphicon
+      color: $col-black
+  .bg-oval
+    background: $col-white
+    width: 60px
+    height: 60px
+    border-radius: 50%
+    box-shadow: 0 0 65px $col-grayblue-15
+    &:hover
+      transform: scale(1.1)
+      transition: transform .5s ease
+//---/////////////////////
+.greet
+  height: 900px
+  margin-bottom: 500px
+  p
+    font: 400 18px/40px $font-monts
+  h3
+    margin: 0
+  button
+    margin-top: 50px
+//---/////////////////////
+.special-offer
+  padding: 125px 0
+  .offers-list
+    padding: 100px 0
+    .offer
+      height: 180px
+      flex-direction: column
+      padding: 20px 0
+      &:before
+        content: ""
+        display: block
+        width: 50px
+        height: 50px
+      &:first-child:before
+        background: url("../img/offer-spritelist.png") no-repeat -5px -5px
+      &:nth-child(2):before
+        background: url("../img/offer-spritelist.png") no-repeat -5px -62px
+      &:nth-child(3):before
+        background: url("../img/offer-spritelist.png") no-repeat -65px -5px
+      &:last-child:before
+        background: url("../img/offer-spritelist.png") no-repeat -127px -5px
+  .offer-text
+    font: 700 18px/18px $font-monts
+    color: $col-black
+  .offer-desc
+    font: 400 14px/24px $font-monts
+    color: $col-grayblue-35
+    text-align: center
+    margin: 0 auto
+    max-width: 230px
+//---/////////////////////
+.photo-nature
+  background: $col-whitegray
+  position: relative
+  z-index: 2
+  .photo-block:nth-child(even) article
+    @media (min-width: 1200px)
+      padding-left: 25%
+  article
+    @media (min-width: 768px)
+      padding-left: 10%
+    p
+      color: $col-grayblue-35
+      font-size: 16px
+      line-height: 36px
+      max-width: 500px
+      margin: auto
+      @media (min-width: 768px)
+        margin: 0
+//---/////////////////////
+.mobile-app
+  padding: 100px 0
+  position: relative
+  .app-info-block
+    padding: 60px 0
+    position: relative
+    z-index: 2
+    h3
+      color: $col-blue
+    p
+      color: $col-grayblue-35
+      font-size: 16px
+      line-height: 36px
+      max-width: 500px
+      margin: auto
+      @media (min-width: 768px)
+        margin: 0
+.snow-figures img
+  -webkit-filter: drop-shadow(0px 0px 10px $col-grayblue-15)
+  &:first-child
+    position: absolute
+    left: 0
+    top: -70px
+    z-index: 1
+  &:last-child
+    position: absolute
+    right: 0
+    bottom: -70px
+    z-index: 1
+//---/////////////////////
+.famous-comments
+  position: relative
+  z-index: 2
+  background: $col-white
+  p
+    color: $col-grayblue-35
+    font-size: 16px
+    line-height: 36px
+    max-width: 500px
+    margin: auto
+    @media (min-width: 768px)
+      margin: 0
+  .name-commenter
+    font: 400 16px/18px $font-monts
+    color: $col-black
+    padding-top: 70px
+  h3
+    padding-bottom: 25px
+    color: $col-pink
+//---/////////////////////
+.footer
+  padding-top: 130px
+  height: 1530px
+  background: url("../img/footer-img.png") no-repeat center bottom
+  button
+    margin-top: 90px
